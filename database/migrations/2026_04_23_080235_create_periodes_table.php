@@ -6,22 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('periodes', function (Blueprint $table) {
+            $table->char('tahun_akademik',9);
+            $table->char('semester',1);
             $table->id();
             $table->timestamps();
-            $table->string('tahun_akademik(2025/2026)');
-            $table->string('semester');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('periodes');

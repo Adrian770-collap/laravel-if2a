@@ -9,6 +9,5 @@
 <body>
     <h1>Halaman tentang</h1>
     <p>Ini Adalah Halaman Tentang Adrian</p>
-
 </body>
 </html>
