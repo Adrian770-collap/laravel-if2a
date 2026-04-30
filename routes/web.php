@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FakultasController;
 use App\Http\Controllers\PeriodeController;
+use App\Http\Controllers\ProdiController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -10,6 +11,10 @@ Route::get('/', function () {
 
 Route::get('/tentang', function () {
     return view('tentang');
+});
+
+Route::get('/prodi', function () {
+    return view('prodi');
 });
 
 Route::get('/controller', function () {
@@ -22,5 +27,7 @@ Route::get('/view', function () {
 
 Route::resource('/fakultas', FakultasController::class);
 
+Route::get('/prodi', [ProdiController::class, 'index']);
 
-Route::resource('/periode', PeriodeController::class);
+Route::resource('/periode', PeriodeController::class );
+

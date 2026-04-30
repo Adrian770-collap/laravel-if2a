@@ -1,0 +1,49 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Prodi;
+use Illuminate\Http\Request;
+
+class ProdiController extends Controller
+{
+    public function index()
+    {
+        $prodis = Prodi::with('fakultas')->get();
+        return view('prodi.index', compact('prodis'));
+    }
+
+    public function create()
+    {
+        
+    }
+
+    public function store(Request $request)
+    {
+       
+    }
+
+  
+    public function show(Prodi $prodi)
+    {
+  
+    }
+
+    
+    public function edit(Prodi $prodi)
+    {
+        
+    }
+
+    
+    public function update(Request $request, Prodi $prodi)
+    {
+        
+    }
+
+   
+    public function destroy(Prodi $prodi)
+    {
+        
+    }
+}
