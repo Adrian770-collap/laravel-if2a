@@ -27,7 +27,7 @@ Route::get('/view', function () {
 
 Route::resource('/fakultas', FakultasController::class);
 
-Route::get('/prodi', [ProdiController::class, 'index']);
+Route::get('/prodi', [ProdiController::class, 'index'])->name('prodi.index');
 
 Route::resource('/periode', PeriodeController::class );
 
